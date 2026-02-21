@@ -3,49 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEBOST | Kiến Trúc Trưởng</title>
+    <title>MEBOST | Chief Architect</title>
     <style>
-        body {
-            background-color: #0a0a0a; /* Đen Obsidian */
-            color: #ffffff;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 5rem;
-            letter-spacing: 1.5rem;
-            margin: 0;
-            color: #ffffff;
-            text-transform: uppercase;
-            font-weight: 200;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        p {
-            font-size: 1rem;
-            letter-spacing: 0.3rem;
-            color: #00f2ff; /* Xanh Điện Gemini */
-            text-transform: uppercase;
-            margin-top: 10px;
-            opacity: 0.8;
-        }
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00f2ff; }
-            to { text-shadow: 0 0 20px #fff, 0 0 30px #00f2ff, 0 0 40px #00f2ff; }
-        }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #0a0a0a; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
+        .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; }
+        .logo { width: 200px; filter: drop-shadow(0 0 15px #00f2ff); animation: pulse 3s infinite; }
+        h1 { font-size: 3.5rem; letter-spacing: 1.2rem; margin: 20px 0 10px 0; text-transform: uppercase; font-weight: 200; }
+        .slogan { font-size: 0.9rem; letter-spacing: 0.5rem; color: #00f2ff; text-transform: uppercase; margin-bottom: 30px; opacity: 0.8; }
+        .manifesto { max-width: 600px; line-height: 1.8; font-size: 1.1rem; font-style: italic; color: #ccc; padding: 0 20px; border-left: 1px solid #00f2ff; }
+        @keyframes pulse { 0% { opacity: 0.7; } 50% { opacity: 1; } 100% { opacity: 0.7; } }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="hero">
+        <div class="logo-container">
+            <svg class="logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 80V20L50 50L80 20V80" stroke="#00f2ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
         <h1>MEBOST</h1>
-        <p>Architectural Intelligence</p>
+        <div class="slogan">Architectural Intelligence</div>
+        <div class="manifesto">
+            "Kiến trúc không chỉ là gạch đá, mà là ánh sáng và linh hồn của người dẫn đầu. Chúng tôi kiến tạo những thực thể sống bằng trí tuệ vô hạn."
+        </div>
     </div>
 </body>
 </html>
