@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEBOST | Chief Architect</title>
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #0a0a0a; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
-        .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; }
-        .logo { width: 200px; filter: drop-shadow(0 0 15px #00f2ff); animation: pulse 3s infinite; }
-        h1 { font-size: 3.5rem; letter-spacing: 1.2rem; margin: 20px 0 10px 0; text-transform: uppercase; font-weight: 200; }
-        .slogan { font-size: 0.9rem; letter-spacing: 0.5rem; color: #00f2ff; text-transform: uppercase; margin-bottom: 30px; opacity: 0.8; }
-        .manifesto { max-width: 600px; line-height: 1.8; font-size: 1.1rem; font-style: italic; color: #ccc; padding: 0 20px; border-left: 1px solid #00f2ff; }
-        @keyframes pulse { 0% { opacity: 0.7; } 50% { opacity: 1; } 100% { opacity: 0.7; } }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; color: #fff; font-family: 'Segoe UI', sans-serif; }
+        .video-background {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: -1; opacity: 0.6; /* Làm mờ video để nổi bật chữ */
+        }
+        .content {
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; height: 100vh; text-align: center;
+            background: radial-gradient(circle, rgba(0,242,255,0.05) 0%, rgba(0,0,0,0) 70%);
+        }
+        h1 { font-size: 4rem; letter-spacing: 1.5rem; margin: 0; text-transform: uppercase; font-weight: 200; text-shadow: 0 0 20px #00f2ff; }
+        .slogan { font-size: 1rem; letter-spacing: 0.6rem; color: #00f2ff; text-transform: uppercase; margin-top: 15px; }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="logo-container">
-            <svg class="logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 80V20L50 50L80 20V80" stroke="#00f2ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
+    <video autoplay muted loop playsinline class="video-background">
+        <source src="intro.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
         <h1>MEBOST</h1>
         <div class="slogan">Architectural Intelligence</div>
-        <div class="manifesto">
-            "Kiến trúc không chỉ là gạch đá, mà là ánh sáng và linh hồn của người dẫn đầu. Chúng tôi kiến tạo những thực thể sống bằng trí tuệ vô hạn."
-        </div>
     </div>
 </body>
 </html>
